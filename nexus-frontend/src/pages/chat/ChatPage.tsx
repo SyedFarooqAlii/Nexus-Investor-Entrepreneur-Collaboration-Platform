@@ -12,7 +12,7 @@ import api from '../../services/api';
 import toast from 'react-hot-toast';
 import io, { Socket } from 'socket.io-client';
 
-const SOCKET_URL = 'http://localhost:5005';
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://nexus-platefrom-production.up.railway.app';
 
 export const ChatPage: React.FC = () => {
   const { userId } = useParams<{ userId: string }>();

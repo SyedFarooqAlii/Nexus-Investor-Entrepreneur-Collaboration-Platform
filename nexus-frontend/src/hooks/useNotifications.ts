@@ -3,7 +3,7 @@ import { io, Socket } from 'socket.io-client';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 
-const SOCKET_URL = 'http://localhost:5005';
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://nexus-platefrom-production.up.railway.app';
 
 export const useNotifications = () => {
   const { user } = useAuth();
